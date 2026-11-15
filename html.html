@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== TITLE ELEMENT (Lab 3 - Section 1) ===== -->
+  <title>How HTML Works | My Website</title>
+
+  <!-- ===== META ELEMENT (Lab 3 - Section 3) ===== -->
+  <meta name="description" content="Web Development Course - HTML and CSS Practice Page">
+  <meta name="author" content="Your Name">
+
+  <!-- ===== FAVICON (Lab 3 - Section 3: How to Add a Favicon) =====
+       Place a small .ico / .png / .jpg file inside images/ folder.
+       Example: images/favicon.png (32x32 px recommended) -->
+  <link rel="icon" href="images.jpg" type="image/png">
+
+  <!-- ===== EXTERNAL STYLESHEET (from your main website) ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ===== INTERNAL CSS (Lab 3 - Style Element + Link Colors) ===== -->
+  <style>
+    /* Link Colors (Lab 3 - Section: Link Colors) */
+    a:link    { color: green;  background-color: transparent; text-decoration: none; }
+    a:visited { color: pink;   background-color: transparent; text-decoration: none; }
+    a:hover   { color: red;    background-color: transparent; text-decoration: underline; }
+    a:active  { color: yellow; background-color: transparent; text-decoration: underline; }
+
+    /* Border example (Lab 3 - Border section) */
+    .bordered {
+      border: 2px solid rgb(17, 201, 130);
+      padding: 8px;
+    }
+
+    /* Table borders (Lab 3 - HTML Tables) */
+    .styled-table, .styled-table th, .styled-table td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Student Portfolio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="html.html">How HTML works</a>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- ============================================================= -->
+    <!-- 1. HEADINGS                                                   -->
+    <!-- ============================================================= -->
+    <section>
+      <h1>HTML Headings (h1 → h6)</h1>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 2. PARAGRAPHS + TEXT FORMATTING                               -->
+    <!-- ============================================================= -->
+    <section>
+      <h2>How to Add a Paragraph</h2>
+      <p>
+        A Bachelor’s of <b>Computer Science</b> in <i>Pakistan</i> is one of the most
+        sought-after degrees in the country. Everything we see or use around us is a
+        product of computer science or advanced computing technology.
+        <br>
+        This includes everything from smartphones, smart air conditioning,
+        smart refrigerators, electric cars, and automated security systems.
+      </p>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 3. LISTS (Lab 3 - Lists: ol, ul, dl)                          -->
+    <!-- ============================================================= -->
+    <section>
+      <h2>HTML Lists</h2>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>ICT</li>
+        <li>CP</li>
+      </ol>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>ICT</li>
+        <li>CP</li>
+      </ul>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 4. BORDER (Lab 3 - Border)                                    -->
+    <!-- ============================================================= -->
+    <section>
+      <h2>Borders</h2>
+      <p class="bordered">This is a bordered paragraph.</p>
+      <p style="border: 2px solid rgb(17, 201, 130); padding: 8px;">
+        Inline styled border example.
+      </p>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 5. TABLES (Lab 3 - HTML Tables with colspan/rowspan)          -->
+    <!-- ============================================================= -->
+    <section>
+      <h2>Simple Table</h2>
+      <table class="styled-table">
+        <tr><th>Subject</th><th>Lab</th></tr>
+        <tr><td>ICT</td><td>ICT-Lab</td></tr>
+        <tr><td>CP</td><td>CP-Lab</td></tr>
+      </table>
+
+      <h2>Table with Merged Cells</h2>
+      <table class="styled-table">
+        <tr>
+          <th>Header 1</th><th>Header 2</th><th>Header 3</th>
+        </tr>
+        <tr>
+          <td>1</td><td>2</td><td>3</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="background-color: rgb(241,200,206);">Merged Column</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="background-color: rgb(241,200,206);">Merged Row</td>
+          <td>2</td><td>3</td>
+        </tr>
+        <tr>
+          <td>2</td><td>3</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 6. IMAGES (Lab 3 - Images, Image Maps, Picture, Background)   -->
+    <!-- ============================================================= -->
+    <section>
+      <h2>Basic Image</h2>
+      <img src="images.jpg" alt="Sample image" width="300">
+
+      <h2>Image as a Link</h2>
+      <a href="https://www.bahria.edu.pk">
+        <img src="images.jpg" alt="Clickable BU Logo" width="120">
+      </a>
+
+      <h2>Image Map</h2>
+      <img src="images.jpg" alt="Work map" width="400" usemap="#workmap">
+      <map name="workmap">
+        <area shape="circle" coords="150,120,60"
+              href="https://magnetsforyou.co.za/"
+              alt="Compass">
+      </map>
+
+      <h2>Picture Element (Responsive Image)</h2>
+      <picture>
+        <source srcset="images.jpg" media="(min-width: 800px)">
+        <img src="images.jpg" alt="Responsive image" width="300">
+      </picture>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 7. LINKS (Lab 3 - Links: absolute, relative, target, mailto,  -->
+    <!--             button, bookmark)                                 -->
+    <!-- ============================================================= -->
+    <section>
+      <h2>HTML Links</h2>
+
+      <h3>Absolute URL</h3>
+      <a href="https://www.bahria.edu.pk/home" target="_blank">
+        Visit Bahria University (opens in new tab)
+      </a>
+
+      <h3>Relative URL</h3>
+      <a href="about.html">Visit About Page</a>
+
+      <h3>Email Link</h3>
+      <a href="mailto:someone@example.com?subject=Hello&body=Hi%20there">
+        Send Email
+      </a>
+
+      <h3>Button as a Link</h3>
+      <button onclick="location.href='https://www.bahria.edu.pk'">
+        Go to Website
+      </button>
+
+      <h3>Bookmark Link</h3>
+      <a href="#section1">Go to Section 1 (bottom of page)</a>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 8. BOOKMARK TARGET SECTION                                    -->
+    <!-- ============================================================= -->
+    <section id="section1">
+      <h2>Section 1 (Bookmark Target)</h2>
+      <p>You reached this section using the bookmark link above.</p>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 9. ADDRESS + CITE (Lab 3 - Special HTML elements)             -->
+    <!-- ============================================================= -->
+    <section>
+      <h2>Address and Cite</h2>
+      <address>
+        Written by <cite>Kashmala Tariq</cite><br>
+        Bahria University, Islamabad<br>
+        <a href="mailto:you@example.com">kashmalatariq2006@gmail.com</a>
+      </address>
+      <p>
+        <cite>Discovering Computers</cite> by Shelly &amp; Vermaat.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 Kashmala Tariq</p>
+  </footer>
+
+</body>
+</html>
